@@ -24,6 +24,15 @@ pipeline{
             }
         }
     }
+    post{
+        success{
+            'Pipeline succesfull'
+        }
+        failure{
+            'Pipeline failure'
+        }
+    }
+
 
 
 }
