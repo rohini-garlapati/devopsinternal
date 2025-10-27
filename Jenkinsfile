@@ -26,15 +26,16 @@ pipeline{
     }
     post{
         success{
-            'Pipeline succesfull'
+            echo 'Pipeline succesfull'
         }
         failure{
-            'Pipeline failure'
+            echo 'Pipeline failure'
         }
     }
 
 
 
 }
+
 
 
