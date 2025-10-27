@@ -11,13 +11,13 @@ pipeline{
                 bat 'docker login -u rohinigarlapati -p Potatotabla1.'
         }
         }
-        stage(Push to docker hub){
+        stage('Push to docker hub'){
         steps{
             bat 'docker tag webapp rohinigarlapati/kuberdemoapp:v1'
             bat 'docker push rohinigarlapati/kuberdemoapp:v1'
         }
         }
-        stage(Deploy to kubernetes){
+        stage('Deploy to kubernetes'){
             steps{
                 bat 'kubectl apply -f deployment.yaml --validate=false'
                 bat 'kubectl apply -f service.yaml'
@@ -36,4 +36,5 @@ pipeline{
 
 
 }
+
 
