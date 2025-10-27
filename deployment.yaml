@@ -15,5 +15,6 @@ spec:
       container:
         - name:kuberdemoapp
           image: rohinigarlapati/sample:v1
-          post: 
+          port: 
             - containerPort:5000
+
